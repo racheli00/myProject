@@ -1,0 +1,95 @@
+﻿<Window x:Class="tastyProject.Search"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tastyProject"
+        mc:Ignorable="d"
+        Closing="Window_Closing"
+        Title="חיפוש לפי מצרכים" 
+        Height="1800" Width="1917.647" WindowState="Maximized" ResizeMode="CanResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0" Background="#c32026" Height="70" VerticalAlignment="Top" >
+
+            <Image x:Name="logo" Margin="0,3,0,3" Width="150" HorizontalAlignment="Left" Source="images\design\Logo.jpg" Stretch="Fill" ToolTip="חזרה לדף הראשי" MouseDown="Image_MouseDown"></Image>
+            <Image x:Name="signOff" Width="50" Margin="5,15,5,15" HorizontalAlignment="Center" Source="images\design\profile.png" Stretch="Fill" ToolTip="התנתק" MouseDown="Image_MouseDown"></Image>
+            <Image x:Name="likedRecipe" Width="50" Margin="5,15,5,15" HorizontalAlignment="Center" Source="images\design\liked-recipes.png" Stretch="Fill" ToolTip="מתכונים שאהבת" MouseDown="Image_MouseDown" ></Image>
+            <Image x:Name="lastRecipes" Width="50" Margin="5,15,5,15" HorizontalAlignment="Center" Source="images\design\last-recipes.png" Stretch="Fill" ToolTip="מתכונים אחרונים" MouseDown="Image_MouseDown"></Image>
+            <Image x:Name="search" Width="50" Margin="5,15,5,15" HorizontalAlignment="Left" Source="images\design\search-cart.png" Stretch="Fill" ToolTip="לחיפוש לפי מוצרים" MouseDown="Image_MouseDown"></Image>
+            <Image x:Name="return" Width="50" Margin="5,15,5,15" HorizontalAlignment="Right" Source="images\design\return.png" Stretch="Fill" ToolTip="חזרה לדף הקודם" MouseDown="Image_MouseDown"></Image>
+
+        </DockPanel>
+        
+        <StackPanel AllowDrop="True" Grid.Row="1" HorizontalAlignment="Left" Height="auto" Width="170" VerticalAlignment="Top">
+                <Image x:Name="basket" Cursor="Hand" AllowDrop="True" Stretch="Fill" Height="120"  Source="images\design\cart.jpg" MouseDown="basket_mouseDown" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Width="170" />
+                <Grid x:Name="afterDrop" AllowDrop="True" Height="auto" HorizontalAlignment="Left" Width="170">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="56*" MinWidth="10"/>
+                        <ColumnDefinition Width="57*" MinWidth="10"/>
+                        <ColumnDefinition Width="57"/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" MinWidth="20" AllowDrop="False" Margin="170,0,0,0">
+
+                <Grid Grid.Column="1" AllowDrop="True" x:Name="mainGrd" Height="auto" Margin="20,10,20,30" >
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition MinWidth="250" Width="250*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition MinHeight="100" Height="100*" ></RowDefinition>
+                        <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                        <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                        <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                        <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                        <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                        <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                        <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                        <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                        <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                        <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                        <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                        <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" Height="100" Width="686" HorizontalAlignment="Right"  Background="LightGray" Margin="0,14">
+                        <TextBlock Margin="20,15,20,4"  FontSize="20" TextWrapping="Wrap" FlowDirection="RightToLeft" LineStackingStrategy="BlockLineHeight" LineHeight="35" FontWeight="Bold" FontFamily="/tastyProject;component/Fonts/#Heebo">יש  לכם את המוצר בבית? גררו אותו לעגלה,<LineBreak/> לסיום - לחצו על העגלה, ונמצא עבורכם את המתכונים המתאימים והטעימים!</TextBlock>
+                    </StackPanel>
+
+                    <Label Content="בשרים ועופות" VerticalAlignment="Top" HorizontalAlignment="Right"  Grid.Row="1" Height="32" Width="120" HorizontalContentAlignment="Right" FontSize="16" FontFamily="/tastyProject;component/Fonts/#Heebo" AllowDrop="False"/>
+                    <Label Content="דגים"  VerticalAlignment="Top" Height="32" Width="120" HorizontalAlignment="Right" HorizontalContentAlignment="Right" Grid.Row="2" FontSize="16" FontFamily="/tastyProject;component/Fonts/#Heebo" AllowDrop="False"/>
+                    <Label Content="ירקות" Grid.Row="3" VerticalAlignment="Top" Height="32" Width="120" HorizontalAlignment="Right" HorizontalContentAlignment="Right" FontSize="16" FontFamily="/tastyProject;component/Fonts/#Heebo" AllowDrop="False"/>
+                    <Label Content="מוצרי אפייה ובישול" Grid.Row="4" VerticalAlignment="Top" Height="32" Width="142" HorizontalAlignment="Right" HorizontalContentAlignment="Right" FontSize="16" FontFamily="/tastyProject;component/Fonts/#Heebo"/>
+                    <Label Content="מוצרי חלב" Grid.Row="5" VerticalAlignment="Top" Height="32" Width="120" RenderTransformOrigin="0.508,5.361" HorizontalAlignment="Right" HorizontalContentAlignment="Right" FontSize="16" FontFamily="/tastyProject;component/Fonts/#Heebo"/>
+                    <Label Content="עשבי תיבול" Grid.Row="6" VerticalAlignment="Top" Height="32" Width="120" RenderTransformOrigin="0.508,5.361" HorizontalAlignment="Right" HorizontalContentAlignment="Right" FontSize="16" FontFamily="/tastyProject;component/Fonts/#Heebo"/>
+                    <Label Content="פיצוחים" Grid.Row="7" VerticalAlignment="Top" Height="32" Width="120" RenderTransformOrigin="0.508,5.361" HorizontalAlignment="Right" HorizontalContentAlignment="Right" FontSize="16" FontFamily="/tastyProject;component/Fonts/#Heebo"/>
+                    <Label Content="פירות" Grid.Row="8" VerticalAlignment="Top" Height="32" Width="120" RenderTransformOrigin="0.508,5.361" HorizontalAlignment="Right" HorizontalContentAlignment="Right" FontSize="16" FontFamily="/tastyProject;component/Fonts/#Heebo"/>
+                    <Label Content="פסטות" Grid.Row="9" VerticalAlignment="Top" Height="32" Width="120" RenderTransformOrigin="0.508,5.361" HorizontalAlignment="Right" HorizontalContentAlignment="Right" FontSize="16" FontFamily="/tastyProject;component/Fonts/#Heebo"/>
+                    <Label Content="דגנים וקטניות" Grid.Row="10" VerticalAlignment="Top" Height="32" Width="120" RenderTransformOrigin="0.508,5.361" HorizontalAlignment="Right" HorizontalContentAlignment="Right" FontSize="16" FontFamily="/tastyProject;component/Fonts/#Heebo"/>
+                    <Label Content="רטבים ותבלינים" Grid.Row="11" VerticalAlignment="Top" Height="32" Width="120" RenderTransformOrigin="0.508,5.361" HorizontalAlignment="Right" HorizontalContentAlignment="Right" FontSize="16" FontFamily="/tastyProject;component/Fonts/#Heebo"/>
+                    <Label Content="שימורים" Grid.Row="12" VerticalAlignment="Top" Height="32" Width="120" RenderTransformOrigin="0.508,5.361" HorizontalAlignment="Right" HorizontalContentAlignment="Right" FontSize="16" FontFamily="/tastyProject;component/Fonts/#Heebo"/>
+
+                    <Grid Grid.Row="1"></Grid>
+                    <Grid Grid.Row="2"></Grid>
+                    <Grid Grid.Row="3"></Grid>
+                    <Grid Grid.Row="4"></Grid>
+                    <Grid Grid.Row="5"></Grid>
+                    <Grid Grid.Row="6"></Grid>
+                    <Grid Grid.Row="7"></Grid>
+                    <Grid Grid.Row="8"></Grid>
+                    <Grid Grid.Row="9"></Grid>
+                    <Grid Grid.Row="10"></Grid>
+                    <Grid Grid.Row="11"></Grid>
+                    <Grid Grid.Row="12"></Grid>
+                </Grid>
+
+        </ScrollViewer>
+    </Grid>
+</Window>

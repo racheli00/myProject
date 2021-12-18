@@ -1,0 +1,30 @@
+﻿<Window x:Class="tastyProject.messageBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tastyProject"
+        mc:Ignorable="d"
+        Title="" Height="200" Width="550" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
+    <Grid Height="170" Width="500">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="textMsg" Text="?בטוחים שאתם רוצים להתנתק" FontSize="30" FontFamily="/tastyProject;component/Fonts/#Heebo Medium" Margin="60,40,0,0" TextAlignment="Center" TextWrapping="Wrap" Foreground="Black" Grid.ColumnSpan="2"></TextBlock>
+        <Button x:Name="yesB" Style="{StaticResource CustomButtonStyle}" Cursor="Hand" Grid.Row="1" Width="70" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="90,25,0,25" Background="#FFC32026" BorderBrush="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"  Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Click="yesB_Click">כן
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="noB" Style="{StaticResource CustomButtonStyle}" Cursor="Hand" Grid.Row="1" Width="70" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="5,25,0,25" Background="#FFC32026" BorderBrush="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"  Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Click="noB_click">לא
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>

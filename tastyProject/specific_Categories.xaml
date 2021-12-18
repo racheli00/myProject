@@ -1,0 +1,44 @@
+﻿<Window x:Class="tastyProject.specific_Categories"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tastyProject"
+        Closing="Window_Closing"
+        mc:Ignorable="d"
+        Title="specific_Categories" Height="450" Width="800"  WindowStartupLocation="CenterScreen" WindowState="Maximized" ResizeMode="CanResize">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" MinWidth="20">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <ImageBrush/>
+            </Grid.Background>
+            <DockPanel Grid.Row="0" Background="#c32026" Height="70" VerticalAlignment="Top" >
+
+                <Image x:Name="logo" Margin="0,3,0,3" Width="150" HorizontalAlignment="Left" Source="images\design\Logo.jpg" Stretch="Fill" ToolTip="חזרה לדף הראשי" MouseDown="Image_MouseDown"></Image>
+                <Image x:Name="signOff" Width="50" Margin="5,15,5,15" HorizontalAlignment="Center" Source="images\design\profile.png" Stretch="Fill" ToolTip="התנתק" MouseDown="Image_MouseDown"></Image>
+                <Image x:Name="likedRecipe" Width="50" Margin="5,15,5,15" HorizontalAlignment="Center" Source="images\design\liked-recipes.png" Stretch="Fill" ToolTip="מתכונים שאהבת" MouseDown="Image_MouseDown" ></Image>
+                <Image x:Name="lastRecipes" Width="50" Margin="5,15,5,15" HorizontalAlignment="Center" Source="images\design\last-recipes.png" Stretch="Fill" ToolTip="מתכונים אחרונים" MouseDown="Image_MouseDown"></Image>
+                <Image x:Name="search" Width="50" Margin="5,15,5,15" HorizontalAlignment="Left" Source="images\design\search-cart.png" Stretch="Fill" ToolTip="לחיפוש לפי מוצרים" MouseDown="Image_MouseDown"></Image>
+                <Image x:Name="return" Width="50" Margin="5,15,5,15" HorizontalAlignment="Right" Source="images\design\return.png" Stretch="Fill" ToolTip="חזרה לדף הקודם" MouseDown="Image_MouseDown"></Image>
+            </DockPanel>
+            
+             <Label Grid.Row="1" Name="pageTitle" Content="pageTitle" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="/tastyProject;component/Fonts/#Heebo" FontSize="30" FlowDirection="RightToLeft" Height="50"/>
+            <Label Grid.Row="1" Name="resultsNum" Content="X תוצאות חיפוש" HorizontalAlignment="Left" VerticalAlignment="top" FontFamily="/tastyProject;component/Fonts/#Heebo" FontSize="15" Height="35" FlowDirection="RightToLeft" HorizontalContentAlignment="Left"/>
+           
+            <Grid Grid.Row="2" x:Name="grid" Height="auto" MinHeight="50" VerticalAlignment="Stretch" Width="auto" MinWidth="200" Margin="50,20,50,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition MinWidth="60" Width="60*"></ColumnDefinition>
+                    <ColumnDefinition MinWidth="60" Width="60*"></ColumnDefinition>
+                    <ColumnDefinition MinWidth="60" Width="60*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</Window>

@@ -1,0 +1,24 @@
+﻿<Window x:Class="tastyProject.msgBoxOK"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tastyProject"
+        mc:Ignorable="d"
+        Title="" Height="160" Width="350" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
+    <Grid Height="120" Width="320">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="textMsg" Text="שם משתמש או סיסמא חסרים" FontSize="20" FontFamily="/tastyProject;component/Fonts/#Heebo Medium" Margin="60,20,0,0" TextAlignment="Center" TextWrapping="Wrap" Foreground="Black" Grid.ColumnSpan="2"></TextBlock>
+
+        <Button x:Name="ok" Style="{StaticResource CustomButtonStyle}" Cursor="Hand" Grid.Row="1" Width="50" FontSize="10" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="5,0,0,15" Background="#FFC32026" BorderBrush="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"  Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Click="ok_Click">אוקיי
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>
