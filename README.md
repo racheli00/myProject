@@ -19,5 +19,5 @@ Tasty requires the following softwares:
  * [Sql Express](https://www.microsoft.com/he-il/sql-server/sql-server-downloads)
 
 ## Usage
-After downloading all the requirements simply run tastyProject.sln from the main folder.
+After downloading all the requirements simply run ```tastyProject.sln``` from the main folder.
 
