@@ -9,9 +9,9 @@ sorted by the amount of ingredients that match your request.
 
 ## Environment And Languages
 
-Tasty is a Visual Studio project using WPF application technology.
-The programming language is C#, and for the UI part xaml language.
-The storage method is SQL Server Database. access to the database is by ADO.Net using SQLEXPRESS.
+Tasty is a __Visual Studio__ project using __WPF__ application technology.
+The programming language is __C#__, and for the UI part __XAML__ language.
+The storage method is __SQL__ Server Database. access to the database is by __ADO.Net__ using __SQLEXPRESS__.
 
 ## Requirements
 Tasty requires the following softwares:
