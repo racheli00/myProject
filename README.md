@@ -16,7 +16,8 @@ The storage method is SQL Server Database. access to the database is by ADO.Net 
 ## Requirements
 Tasty requires the following softwares:
  * [Sql Express](https://www.microsoft.com/he-il/sql-server/sql-server-downloads)
+ * [Visual Studio](https://visualstudio.microsoft.com/downloads/) **optional*
 
 ## Usage
-After downloading all the requirements simply run ```tastyProject/bin/Debug/tastyProject.exe``` from the main folder.
+After downloading the project and the requirement softwares simply run ```tastyProject/bin/Debug/tastyProject.exe``` from the main folder.
 
