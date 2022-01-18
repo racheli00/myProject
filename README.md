@@ -3,8 +3,7 @@
 ## Description
 
 Tasty is a collection of recipes which allows the user to search by criteria: category / recipe name, etc.
-<br />
-You can enter the products (food elements) you have and you will receive recipes that contain these products,
+> You can enter the products (food elements) you have and you will receive recipes that contain these products,
 sorted by the amount of ingredients that match your request.
 
 ## Environment And Languages
