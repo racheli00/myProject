@@ -18,5 +18,5 @@ Tasty requires the following softwares:
  * [Visual Studio](https://visualstudio.microsoft.com/downloads/) **optional*
 
 ## Usage
-After downloading the project and the requirement softwares simply run ```tastyProject/bin/Debug/tastyProject.exe``` from the main folder.
+After downloading the project and the required softwares, simply run ```tastyProject/bin/Debug/tastyProject.exe```.
 
